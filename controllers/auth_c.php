@@ -1,13 +1,6 @@
 <?php
-//connexion base
-try{
-    $bdd = new PDO('mysql:host=localhost;dbname=mdp;charset=utf8', 'root', '');
-	//echo "connexion base OK";
-}
-catch (Exception $e){
-    die('Erreur : ' . $e->getMessage());	
-}
 //authentification
+require_once('../modeles/connexion.php');
 if(isset($_POST['pseudo']) and isset($_POST['password']))
 {
 $reponse=$bdd->prepare('select count(*)	as nb from utilisateur where pseudo=? and password= ?');
