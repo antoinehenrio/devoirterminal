@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css" /> 
+</head>
+<body>
+
+<h2>Accès à votre espace personnel</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Connexion</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" method ="post" action="auth_c.php" >
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+     
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Pseudo</b></label>
+      <input type="text" placeholder="Entrez votre pseudo" name="pseudo" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Entrez votre mot de passe" name="password" required>
+        
+      <button type="submit">Login</button>
+     
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annuler</button>
+      <span class="psw">Mot de passe oublié <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
