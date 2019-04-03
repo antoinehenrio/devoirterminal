@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../style.css" /> 
 </head>
@@ -47,8 +48,9 @@
       <input type="password" placeholder="Entrez votre login" name="login" required>
 
       <label for="psw"><b>Nouveau mot de passe</b></label>
-      <input type="password" placeholder="Entrez votre nouveau mot de passe" name="new_mdp" required>
-        
+      <input type="password" placeholder="Entrez votre nouveau mot de passe" id="newmdp" name="new_mdp" required>
+      <meter max="4" id="password-strength-meter"></meter>
+	  <p id="password-strength-text"></p>
       <button type="submit">Envoyer</button>
      
     </div>
@@ -77,6 +79,7 @@ window.onclick = function(event) {
     }
 }
 </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
+<script src="../script.js"></script>
 </body>
 </html>
